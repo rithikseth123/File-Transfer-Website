@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload File</title>
+        <link rel="stylesheet"
+              type="text/css"
+              href="{% static 'file_sharing/form.css' %}">
+    </head>
+    <body>
+        <form method="POST" enctype="multipart/form-data">
+            <h1>Upload a File</h1>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+    </body>
+</html>

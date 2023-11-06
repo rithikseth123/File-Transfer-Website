@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Share Link</title>
+        <link rel="stylesheet"
+              type="text/css"
+              href="{% static 'file_sharing/form.css' %}">
+    </head>
+    <body>
+        {% comment %} <a href="{% url "file_sharing:upload-file" %}"> {% endcomment %}
+        <a href="{% url "upload-file" %}">
+            <h1>Upload A File</h1>
+        </a>
+    </body>
+</html>
